@@ -1,0 +1,33 @@
+CODIGO,NOMBRE,CRÉDITOS,REQUISITOS,NIVEL,CICLO,BACHILLERATO
+EIF200,Fundamentos de Informática,3,Ingreso a Carrera,1,1,0
+MAT030,Matemática para Informática,4,Ingreso a Carrera,1,1,0
+LIX410,Inglés integrado I,4,Ingreso a Carrera,1,1,0
+EIF201,Programación I,4,EIF200;MAT030,1,2,0
+MAT002,Cálculo I,4,MAT030,1,2,0
+LIX411,Inglés Integrado II,4,LIX410,1,2,0
+EIF204,Programación II,4,EIF201,2,1,0
+MAT005,Álgebra Lineal,4,MAT002,2,1,0
+EIF202,Soporte Técnico,3,EIF200,2,1,0
+EIF203,Estructuras Discretas para Informática,3,EIF200;MAT030,2,1,0
+LIX412,Inglés Integrado III,4,LIX411,2,1,0
+EIF206,Programación III,4,EIF204;MAT002,2,2,0
+EIF207,Estructuras de Datos,4,EIF203;EIF204,2,2,0
+EIF205,Arquitectura de Computadoras,3,EIF201;EIF202,2,2,0
+EIF404,La Organización y su Entorno,3,EIF201,2,2,0
+MAT006,Probabilidad y Estadística para Informática,3,MAT002;EIF203,2,2,0
+EIF209,Programación IV,4,EIF206,3,1,0
+EIF210,Ingeniería de Sistemas I,4,EIF206,3,1,0
+EIF211,Diseño e Implementación de Bases de Datos,4,EIF206;EIF207,3,1,0
+EIF212,Sistemas Operativos,3,EIF204;EIF205,3,1,0
+EIF208,Comunicaciones y redes de Computadores,3,EIF205,3,1,0
+EIF400,Paradigmas de Programación,4,EIF206,3,2,1
+EIF401,Ingeniería de Sistemas II,4,EIF210,3,2,1
+EIF402,Administración de Bases de Datos,4,EIF212;EIF211,3,2,1
+EIF412,Investigación de Operaciones y sus Aplicaciones,3,EIF206;MAT005;MAT006,3,2,1
+EIF407,Liderazgo y Organización,3,EIF404,3,2,1
+EIF411,Diseño y Programación de Plataformas Móviles,4,EIF209,4,1,1
+EIF406,Ingeniería de Sistemas III,4,EIF401,4,1,1
+EIF413,Métodos de Investigación Científica en Informática,3,MAT006,4,1,1
+EIF408,Proyectos y su Aplicación en la Organización (PPS),5,EIF209;EIF401;EIF402,4,2,1
+EIF409,Aplicaciones Informáticas Globales,4,EIF209;EIF401;EIF402,4,2,1
+EIF410,Informática y Sociedad,2,EIF401,4,2,1
