@@ -17,6 +17,13 @@ class Curso:
     def __str__(self) -> str:
         return f"[{self.codigo}]({self.nombre})"
 
+    def __eq__(self, other):
+        if isinstance(other, Curso):
+            return self.codigo == other.codigo
+        if isinstance(other, str):
+            return self.codigo == other
+        return False
+
 
 def load_cursos(nombre_archivo):
     cursos = []
@@ -48,12 +55,35 @@ def load_estado(nombre_archivo):
                 fila["BACHILLERATO"]))
     return cursos
 
+def cursos_restantes(cursos, aprobados):
+    restantes = []
+    for c in cursos:
+        if c not in aprobados:
+            restantes.append(c)
+    return restantes
+
+def cursos_matriculables(aprobados, restantes):
+    matriculables = []
+    for curso in restantes:
+        matriculable = True
+        for requisito in curso.requisitos:
+            if requisito not in aprobados:
+                matriculable = False
+                break
+        if matriculable:
+            matriculables.append(curso)
+    return matriculables
+
 def main():
     cursos = load_cursos("cursos.csv")
-    estado = load_estado("estado.csv")
-    aprobados = [f'[{c.codigo}]: "{c.nombre}"' for c in estado]
-    for aprobado in aprobados:
-        print(aprobado)
+    aprobados = load_estado("estado.csv")
+    restantes = cursos_restantes(cursos, aprobados)
+    matriculables = cursos_matriculables(aprobados, restantes)
+    listado = [f'[{c.codigo}]: "{c.nombre}"' for c in matriculables]
+    print(f"cursos restantes: {len(restantes)}")
+    print("cursos matriculables")
+    for curso in listado:
+        print(curso)
 
 
 if __name__ == "__main__":
