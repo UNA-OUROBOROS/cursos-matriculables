@@ -1,9 +1,13 @@
 CODIGO,NOMBRE,CREDITOS,REQUISITOS,NIVEL,CICLO,BACHILLERATO
 EIF200,Fundamentos de Informática,3,Ingreso a Carrera,1,1,0
 MAT030,Matemática para Informática,4,Ingreso a Carrera,1,1,0
+GEN001,Estudios Generales I,3,Ingreso a Carrera,1,1,0
+GEN002,Estudios Generales II,3,Ingreso a Carrera,1,1,0
 LIX410,Inglés integrado I,4,Ingreso a Carrera,1,1,0
 EIF201,Programación I,4,EIF200;MAT030,1,2,0
 MAT002,Cálculo I,4,MAT030,1,2,0
+GEN003,Estudios Generales III,3,Ingreso a Carrera,1,2,0
+GEN004,Estudios Generales IV,3,Ingreso a Carrera,1,2,0
 LIX411,Inglés Integrado II,4,LIX410,1,2,0
 EIF204,Programación II,4,EIF201,2,1,0
 MAT005,Álgebra Lineal,4,MAT002,2,1,0
@@ -27,7 +31,11 @@ EIF412,Investigación de Operaciones y sus Aplicaciones,3,EIF206;MAT005;MAT006,3
 EIF407,Liderazgo y Organización,3,EIF404,3,2,1
 EIF411,Diseño y Programación de Plataformas Móviles,4,EIF209,4,1,1
 EIF406,Ingeniería de Sistemas III,4,EIF401,4,1,1
+OPT001,Curso Optativo I,4,,4,1,1
+OPT002,Curso Optativo II,4,,4,1,1
 EIF413,Métodos de Investigación Científica en Informática,3,MAT006,4,1,1
 EIF408,Proyectos y su Aplicación en la Organización (PPS),5,EIF209;EIF401;EIF402,4,2,1
 EIF409,Aplicaciones Informáticas Globales,4,EIF209;EIF401;EIF402,4,2,1
+OPT003,Curso Optativo I,4,,4,1,1
+OPT004,Curso Optativo II,4,,4,1,1
 EIF410,Informática y Sociedad,2,EIF401,4,2,1
