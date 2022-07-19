@@ -30,14 +30,7 @@ def load_cursos(nombre_archivo):
     with open(nombre_archivo, newline='', encoding='utf8') as archivo_csv:
         lector_csv = csv.DictReader(archivo_csv, delimiter=',', quotechar='|')
         for fila in lector_csv:
-            cursos.append(Curso(
-                fila["CODIGO"],
-                fila["NOMBRE"],
-                fila["CREDITOS"],
-                fila["REQUISITOS"].split(';'),
-                fila["NIVEL"],
-                fila["CICLO"],
-                fila["BACHILLERATO"]))
+            cursos.append(load_curso(fila))
     return cursos
 
 def load_estado(nombre_archivo):
@@ -45,21 +38,25 @@ def load_estado(nombre_archivo):
     with open(nombre_archivo, newline='', encoding='utf8') as archivo_csv:
         lector_csv = csv.DictReader(archivo_csv, delimiter=',', quotechar='|')
         for fila in lector_csv:
-            cursos.append(Curso(
-                fila["CODIGO"],
-                fila["NOMBRE"],
-                fila["CREDITOS"],
-                fila["REQUISITOS"].split(';'),
-                fila["NIVEL"],
-                fila["CICLO"],
-                fila["BACHILLERATO"]))
+            cursos.append(load_curso(fila))
     return cursos
+
+def load_curso(fila) -> Curso:
+    requisitos = fila["REQUISITOS"]
+    return Curso(
+        fila["CODIGO"],
+        fila["NOMBRE"],
+        fila["CREDITOS"],
+        [] if requisitos == '' else requisitos.split(';'),
+        fila["NIVEL"],
+        fila["CICLO"],
+        fila["BACHILLERATO"])
 
 def cursos_restantes(cursos, aprobados):
     restantes = []
-    for c in cursos:
-        if c not in aprobados:
-            restantes.append(c)
+    for curso in cursos:
+        if curso not in aprobados:
+            restantes.append(curso)
     return restantes
 
 def cursos_matriculables(aprobados, restantes):
