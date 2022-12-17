@@ -1,5 +1,7 @@
 # Cursos matriculables
 
+> este repositorio se encuentra en estado archivado, cualquier trabajo futuro se realizará en [course-manager](https://github.com/UNA-OUROBOROS/flutter-course-manager)
+
 Guía de uso
 
 - copia `cursos.csv` a `estado.csv` y remueve los cursos que no haz matriculado/pasado en `estado.csv`
